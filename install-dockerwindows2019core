@@ -1,0 +1,6 @@
+# Enable Container Feature
+Enable-WindowsOptionalFeature -Online -FeatureName Containers
+# add the new provider for docker
+Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
+# install docker
+Install-Package -Name docker -ProviderName DockerMsftProvider
